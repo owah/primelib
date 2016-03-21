@@ -1,11 +1,13 @@
 # primelib
-primelib is a static library which generates a prime lookup table from 1 to n, in which prime numbers have the value 1 whereas non-prime integers are marked as 0.
+primelib is a static library which generates a lookup table from 1 to n. The LUT is generated with a sieve of Eratosthenes and it places a single bit, 1 if prime, into the corresponding slot.
+
+When a number is checked, its corresponding bit can be looked up in constant time.
 
 ## Usage ##
 The following usage example shows how to use the library:
 
 Create a pointer to the array which will hold all the bits for all the integers.
-Additionally a vector, if you want to, to later only store all the primes.
+Additionally a vector, if you want, to later store all the primes.
 
 call *primelib::generatePrimeLUT(n, primeArray);* n stands for the upper bound.
 
