@@ -1,17 +1,6 @@
 #include "primelib.hpp"
 #include <cmath>
 
-bool primelib::check_prime_b(uint_fast64_t n_t)
-{
-    uint_fast64_t upper_t = std::sqrt(n_t);
-    for (uint_fast64_t i_t = 3; i_t <= upper_t; i_t += 2)
-    {
-        if (n_t % i_t == 0)
-            return false;
-    }
-    return true;
-}
-
 void primelib::generatePrimeLUT(uint_fast64_t n, uint_fast32_t* &primeArray)
 {
     uint_fast64_t primeArrayCounter = 0;
