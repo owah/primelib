@@ -1,13 +1,9 @@
-#ifndef PRIMELIB_HPP
-#define PRIMELIB_HPP
+#pragma once
 
 #include <inttypes.h>
 namespace primelib
 {
-    void generatePrimeLUT(uint_fast64_t n, uint_fast32_t* &primeArray);
+    void generatePrimeLUT(uint64_t n, uint64_t* &primeArray);
 
-    uint_fast64_t retrievePrime(uint_fast64_t n, uint_fast32_t* primeArray);
+    uint64_t retrievePrime(uint64_t n, uint64_t* primeArray);
 }
-
-
-#endif
